@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+    crossorigin="anonymous">
+
+    <!-- Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <title>Vitória Williams @vtoriaandrade</title>
+  </head>
+
+    <body class = "body">
+
+    <!-- Nav-->
+    <header>
+        <nav class="navbar navbar-light nav-top"> <!-- já são estilos prontos, que adquiriu no bootstrap (css)-->
+            
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand" href="https://www.instagram.com/vtoriaandrade/" target="_blank">
+                    <img src="imagens/logo.png" style=" max-width: 130px; max-height: 80px">
+                </a>  <!-- clicável --> <!-- target: abrir uma nova pag--> <!-- criei o estilo no prórpio html e limitei a largura / altura máxima -->
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                </form> <!-- criação da barra de pesquisa --> <!-- o imput irá receber o que digitar no espaço-->
+
+                <div style="width: 30% ;"> <!-- espaço entre os ícones-->
+                    <i class="bi bi-house-door icons"></i> <!-- ícones selecionados bootstrap-->
+                    <i class="bi bi-inbox icons"></i>
+                    <i class="bi bi-compass icons"></i>
+                    <i class="bi bi-heart icons"></i>
+                    <a img class="img-nav" href="https://www.instagram.com/vtoriaandrade/" target="_blank">
+                        <img class= "img-nav" img src="imagens/foto-instagram.jpg" >
+                    </a><!-- imagem do perfil(pequena) clicável-->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <!-- div= elemento de divisão de conteúdo-->
+        <div class=" container"> <!-- cria uma área respansiva e de largura fixa, que fica centraliada na tela-->
+            <div class="row"> <!-- é usada principalm para conter colunas-->
+                <div class="col-o col-md-2"> <!-- col= parametro / 0 = proporção / col-md-2= valor da coluna--> </div>
+                <div class="col-12 col-md-8"> <!-- definição= "quando a tela for maior que md(768px), quero que a tela tenha tal divisão(ex:8)"-->
+                    <div class="container">
+                        <div class="row" style="padding-top: 20px;"> <!-- espaço do cabeçalho-->
+                            <div class="col-3">
+                                <a img class="img-profile" href="https://www.instagram.com/vtoriaandrade/" target="_blank">
+                                <img class="img-profile" src="imagens/foto-instagram.jpg"></a> <!-- foto perfil clicável-->
+                            </div>
+                            <div class="col-7">
+                                <div class="row" style="padding-top:20px; padding-bottom: 10px;">  <!-- espaço do cabeçalho-->
+                                    <div class="col-8 col-lg-5"> <!--coluna tam 8, se a tela for "lg" fique tam 5-->
+                                        <h2 class="username">vtoriaandrade</h2> <!-- username= estilo -->
+                                    </div>
+                                    <div class="col-4 col-lg-6">
+                                        <button type="button" class="btn btn-outline-secondary button-edit">
+                                        Editar perfil </button></div>
+                                </div>
+        
+                            <div class=" container"> 
+                                <div class="row">
+                                    <div class="col-4">
+                                        <p class="profile-datas"><strong>194</strong> publicação</p>
+                                    </div>
+                                    <div class=" col-4">
+                                        <p class="profile-datas"><strong>5.300</strong> seguidores</p> 
+                                    </div>
+                                    <div class="col-4">
+                                        <p class=" profile-datas"><strong>667</strong> seguindo</p>
+                                    </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h1 class="name">Vitória Williams de Andrade</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p class="profile-desc">Estudante | Pernambucana</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2"></div>              
+                        </div>
+                    </div>
+                    
+                    <div style="padding-top: 0px;"> <!--defiindo imagem dos destaques-->
+                        <div class="row"> <!-- = definindo linha-->
+                            <div class="col-2"><canvas id="myCrl"></canvas></div> <!-- = definindo coluna-->
+                            <div class="col-2"><canvas id="myCrl1"></canvas></div> <!-- = definindo coluna-->
+                            <div class="col-2"><canvas id="myCrl2"></canvas></div> <!-- = definindo coluna-->
+                        </div>
+                    </div>  <!--outra coluna com os nomes do destaque-->
+                    <div style="padding-bottom: 40px;"> <!--bottom é pra ter espaço--> <!-- definindo nome dos destaques-->
+                        <div class="row">
+                            <div class="col-2 stories">Checklist</div>
+                            <div class="col-2 stories">Youtube</div>
+                            <div class="col-2 stories">Developer</div>                           
+                        </div>
+                    </div>
+
+                    <!-- linha -->
+                    <hr size="3" width="100%" color="#EEEEEE" stule="margin: 0%;">
+
+                    <!--Nav feed -->
+                    <ul class="nav nav-tabs nav-feed" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active nav-link-1" id="home-tab" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true"><i class="bi bi-grid-3x3"></i> PUBLICAÇÕES</a>
+                        </li>
+           
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link nav-link-2" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="false"><i class="bi bi-file-person"></i> MARCADOS</a>
+                        </li>
+                    </ul>
+
+                    <!--Card feed -->
+                    <div class="tab-content"> <!-- "show active = fica disponível para visualização, sem que aperte algum botão previamente"-->
+                        <div class="tab-pase fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row" style="padding-top:20px; padding-bottom: 10px;"">
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="imagens/post1.png" class="card-img-top" alt="...">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="imagens/post2.png" class="card-img-top" alt="...">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="imagens/post3.png" class="car-img-top" alt="...">
+                                    </div>
+                                </div>
+                                <div class="row" style="padding-top:20px; padding-bottom: 10px;">
+                                    <div class="col-4">
+                                        <div class="card">
+                                            <img src="imagens/post5.png" class="card-img-top" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="card">
+                                            <img src="imagens/post4.png" class="card-img-top" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="card">
+                                            <img src="imagens/post6.png" class="car-img-top" alt="...">
+                                        </div>
+                                    </div>
+                                </div>                             
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpane" aria-labelledby="profile-tab">
+                            <div class="row" stylle="padding-bottom: 25px;">
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="imagens/marcados1.png" class="card-img-top" alt="...">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="imagens/marcados2.png" class="card-img-top" alt="...">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="imagens/marcados3.png" class="card-img-top" alt="...">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="imagens/marcados5.png" class="card-img-top" alt="...">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-0 col-md-2"></div>
+            </div>
+        </div>
+    </section>
+ 
+    <script type= "text/javascript">
+
+        var crl = document.getElementById('myCrl').getContext('2d');
+
+        crl.beginPath();
+        crl.arc(60, 100, 40, 0, 2 * Math.PI);
+        crl.fillStyle ='#00ACC1';
+        crl.fill();
+        crl.linewidth = 5;
+        crl.strokeStyle ='#dbdbdb';
+        crl.stroke();
+
+        var crl1 = document.getElementById('myCrl1').getContext('2d');
+
+        crl1.beginPath();
+        crl1.arc(60, 100, 40, 0, 2 * Math.PI);
+        crl1.fillStyle ='#F8BBD0';
+        crl1.fill();
+        crl1.linewidth = 5;
+        crl1.strokeStyle = '#dbdbdb';
+        crl1.stroke();
+
+        var crl2 = document.getElementById('myCrl2').getContext('2d');
+
+        crl2.beginPath();
+        crl2.arc(60, 100, 40, 0, 2 * Math.PI);
+        crl2.fillStyle ='#E91E63';
+        crl2.fill();
+        crl2.linewidth = 5;
+        crl2.strokeStyle = '#dbdbdb';
+        crl2.stroke();
+
+    </script>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+
+  </body>
+</html>
+
+
+<!-- -->
+<!-- container garante que o layout irá ficar alinhado corretamente na página-->
